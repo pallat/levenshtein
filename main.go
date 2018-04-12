@@ -18,7 +18,7 @@ func main() {
 		return
 	}
 
-	fmt.Printf("Levenshtein distance is %d\n", Levenshtein(*left, *right))
+	fmt.Printf("Levenshtein distance is %d\n", Distance(*left, *right))
 }
 
 func min(a, b int) int {
@@ -29,7 +29,7 @@ func min(a, b int) int {
 }
 
 // code from https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Go
-func Levenshtein(a, b string) int {
+func Distance(a, b string) int {
 	f := make([]int, utf8.RuneCountInString(b)+1)
 
 	for j := range f {
